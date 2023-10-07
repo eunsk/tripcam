@@ -1,0 +1,298 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: 'suit'; */
+    font-family: 'SUIT', sans-serif;
+
+}
+
+body{
+    /* height: 170vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding : 0 20px;
+    background:#fff ;
+}
+
+.container{
+    position :relative;
+    max-width: 700px;
+    width : 100%;
+    background: #F6F3F3;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.container header{
+    font-size : 1.5rem;
+    color:#333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom:90px;
+    margin-top:30px;
+}
+
+/* .container #form {
+    margin-top:30px;
+} */
+
+#form .information{
+    width:100%;
+    margin-top:20px;      
+}
+
+.information label{
+    color:#333;
+}
+
+.ui-selectmenu-button.ui-button{
+    width:100%;
+    position:relative;
+    height:50px;
+    outline:none;
+    font-size:1rem;
+    color:black;
+    margin-top: 8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px 15px;
+    background-color: white;
+    
+}
+
+.ui-menu .ui-menu-item-wrapper{
+    padding:6px 2em 6px .4em;
+}
+
+
+
+/* .ui-spinner-input{
+    width:100%;
+    
+} */
+
+#form .information #name{
+    position :relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    color:black;
+    margin-top: 8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+#form .information #email{
+    position :relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    color:black;
+    margin-top: 8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+
+#form .information #tel{
+    position :relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    color:black;
+    margin-top: 8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+#example .ui-widget.ui-widget-content {
+    border: 1px solid #ddd;
+    position : relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    margin-top: 8px;
+    padding:0 15px;
+}
+
+/* #example #totalRentalDay{
+    position :relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    color:black;
+    margin-top: 8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+} */
+
+
+
+.ui-corner-all{
+    border-radius:6px ;
+}
+
+.ui-widget-content{
+    color:black;
+    
+}
+
+.ui-widget input{
+    padding-top: 11px;
+    width:40px;
+    height:40px;
+    text-align: center;
+    padding-right:20px;
+   
+}
+
+.information-rentalday{
+    width:100%;
+    margin-top:20px;      
+}
+
+.information-time{
+    width:100%;
+    margin-top:20px;
+}
+
+.information-rentalday input{
+    border: 1px solid rgb(221, 221, 221);
+    position : relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    margin-top: 8px;
+    padding:0 15px;
+    border-radius: 6px;
+}
+.information-time input{
+    border: 1px solid rgb(221, 221, 221);
+    position : relative;
+    height:50px;
+    width:100%;
+    outline:none;
+    font-size:1rem;
+    margin-top: 8px;
+    padding:0 15px;
+    border-radius: 6px;
+}
+
+#form #informationAgree{
+    color:#333;
+    margin-top:20px;
+    
+}
+
+#informationAgree .checkbox-label{
+    display: inline-block;
+    position: relative;
+    /* vertical-align: middle;
+    ;color: red */
+    bottom:8px;
+    margin-right:20px;
+}
+
+#informationAgree input{
+    width:25px;
+    height:25px;
+}
+
+#form button{
+    height:55px;
+    width:100%;
+    color:#fff;
+    font-size:1rem;
+    border:none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    background-color: black;
+}
+
+#totalPrice{
+    padding-top:25px;
+}
+
+#totalPrice #total-price{
+    font-weight: bold;
+    font-size:20px;
+    margin-left:3px;
+}
+
+/* ------------------------------미디어 쿼리-------------------------0 */
+
+@media (max-width: 376px) {
+    body {
+      align-items: start; /* body 요소를 수직 가운데 정렬합니다. */
+      display: flex; /* body를 flex 컨테이너로 만듭니다. */
+      height: 200vh; /* 화면 높이의 100%를 사용하여 수직 가운데 정렬합니다. */
+      position:relative;
+    }
+
+    input, select{
+        touch-action: manipulation; /* 스크롤 방지 */
+       -webkit-overflow-scrolling: touch; /* iOS 스크롤 방지 */
+    }
+  
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 25px 20px 25px;
+        max-width: 90%;
+        
+    }
+  
+    #form button {
+      height: 50px; /* 제출 버튼의 높이를 조절합니다. */
+      margin-bottom: 20px; /* 버튼 아래 여백을 조절합니다. */
+    }
+  }
+
+@media (min-width: 376px) and (max-width: 768px) {
+    body {
+      align-items: start; 
+      display: flex; 
+      height: 250vh; 
+      position:relative;
+    }
+
+    input, select{
+        touch-action: manipulation; /* 스크롤 방지 */
+       -webkit-overflow-scrolling: touch; /* iOS 스크롤 방지 */
+    }
+    
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 25px 120px 25px;
+        max-width: 90%;
+        
+        
+    }
+  
+    #form button {
+      height: 50px; /* 제출 버튼의 높이를 조절합니다. */
+      margin-bottom: 20px; /* 버튼 아래 여백을 조절합니다. */
+    }
+  }
+  
+  

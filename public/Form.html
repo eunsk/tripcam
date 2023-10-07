@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripcam(트립캠) - 예약신청</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+  <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+  <section class="container">
+    <header>예약을 도와드릴까요?</header>
+    <form action="http://tripcam.kr/submit"  method="post" id="form">
+      <div class="information">
+        <label for="name">예약자 명</label>
+        <input type="text" id="name" name="name" placeholder="예금자 명과 동일하게"  required>
+      </div>
+      <div class="information">
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" name="tel" placeholder="( -없이 숫자만 입력 )"  required>
+      </div>
+      <div class="information">
+       <label for="product">상품명</label>
+       <select id="product" name="product" required>
+        <!-- <select id="product" name="product" title="상품을 선택해주세요" required> -->
+        <option value="" disabled selected>대여하실 상품을 선택해주세요</option> 
+        <option value="고프로 10">고프로 10</option>
+        <option value="DJI 포켓 2">DJI 포켓 2</option>
+        <option value="아이폰 XS">아이폰 XS</option>
+       </select>
+      </div>
+
+      <div class="information" id="example">
+        <label for="totalRentalDay">총 대여일</label>
+        <input type="text" id="totalRentalDay" name="totalRentalDay"  min="1" max="100" step="1" required>
+      </div>
+      <div class="information">
+       <label for="rental-place">대여장소</label>
+       <select id="rental-place" name="rental-place" required>
+        <option value="" disabled selected>대여하실 장소를 선택해주세요</option> 
+        <option value="incheon-terminal-1">인천공항 제 1터미널</option>
+        <option value="incheon-terminal-2">인천공항 제 2터미널</option>
+       </select>
+      </div>
+      <div class="information">
+        <label for="return-place">반납장소</label>
+        <select id="return-place" name="return-place" required>
+         <option value="" disabled selected>반납하실 장소를 선택해주세요</option> 
+         <option value="incheon-terminal-1">인천공항 제 1터미널</option>
+         <option value="incheon-terminal-2">인천공항 제 2터미널</option>
+        </select>
+      </div>
+      <div class="information-rentalday">
+        <label for="rental-day">대여날짜</label>
+        <input type="text" id="rental-day" name="rental-day" required>
+      </div>
+      <div class="information-time">
+        <label for="rental-time">대여시간</label>
+        <input type="text" id="rental-time" name="rental-time" required>
+      </div>
+      <div class="information-rentalday">
+        <label for="return-day">반납날짜</label>
+        <input type="text" id="return-day" name="return-day" required>
+      </div>
+      <div class="information-time">
+        <label for="return-time">반납시간</label>
+        <input type="text" id="return-time" name="return-time" required>
+      </div>
+      <div id="informationAgree">
+        <label for="information-agree" class="checkbox-label">개인정보 수집 동의</label>
+        <input type="checkbox" id="information-agree" name="information-agree" required>
+      </div>
+      <div id="totalPrice">
+        <p>총 대여금액: <span id="total-price">0원</span></p>
+        <input type="hidden" id="total-price-input" name="total-price-input">
+      </div>
+      
+      <button>대여 예약하기</button>
+      
+      
+    </form>
+    
+  </section>
+
+  
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script src="Form.js"></script>
+  
+</body>
+</html>

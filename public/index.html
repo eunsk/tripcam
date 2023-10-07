@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripcam(트립캠)</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+</head>
+<body>  
+    <div class="section" id="main">
+      
+        <div id="logo">
+          <h1>Tripcam</h1>
+        </div>
+            
+        <div id="intro">
+                <h1 class="service">모든 여행의 순간, Tripcam 과 함께 하세요.</h1>
+                <p class="msg">여행가기 전 공항에서 여행 카메라를 대여 하세요. 수령,반납 언제든 가능 합니다.</p>
+                <button onclick="goToReservationForm()">대여하기</button>
+         </div>  
+    </div>
+    <div class="section" id="products">
+
+      <!-- <div class="products-header">
+       <h2>Products</h2>
+      </div> -->
+
+        <div class=allproducts>
+          
+          <div class="product" id="product1">
+             <img src="./image/gopro.png" alt="고프로10">
+             <div class="productname-price">
+              <h3>고프로 10</h3>
+              <p id="price1" class="price">9,000원</p>
+              <p class="product-explain">수중 촬영 가능,해양 액티비티 여행</p>
+              <p class="inclusionProduct">포함상품 : SD카드, 충전기</p>
+             </div>
+           </div>
+           
+           <div class="product" id="product2">
+             <img src="./image/actioncam.png" alt="DJI포켓2">
+             <div class="productname-price">
+              <h3>DJI 포켓 2</h3>
+              <p id="price2" class="price">12,000원</p>
+              <p class="product-explain">동영상 촬영,브이로그 전용</p>
+              <p class="inclusionProduct">포함상품 : SD카드, 충전기</p>
+            </div>
+           </div>
+           
+           <div class="product" id="product3">
+             <img src="./image/iphone.png" alt="아이폰XS">
+             <div class="productname-price">
+              <h3>아이폰 XS</h3>
+              <p id="price3" class="price">8,000원</p>
+              <p class="product-explain">갤럭시 유저, 다른 감성의 아이폰</p>
+              <p class="inclusionProduct">포함상품 : 충전기</p>
+             </div>
+           </div>
+         </div>
+         
+     </div>
+
+     <div class="section" id="faqPage">
+
+        <div class="faq-container">
+        <div class="faq-header">
+            <h2>FAQ</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq">
+              <div class="question">어디서 수령/반납 가능한가요?  </div>
+              <div class="answer">
+                <인천공항 제 1터미널>
+                <br>장소 : 우체국 앞
+                <br>위치 : 제 1여객터미널 2층 일반지역 중앙<br>
+                <br><인천공항 제2터미널>
+                <br>장소 : 한진택배 앞
+                <br>위치 : 제 2여객터미널 3층 일반지역H 체크인카운터 맞은편
+                <!-- <br>
+                <br>더 자세한 내용과 질문은 <a href="http://pf.kakao.com/_vmzuG" target="_blank">Tripcam 카카오톡 채널</a>로 문의주세요. -->
+              </div>
+            </div>
+            <div class="faq">
+              <div class="question">총 대여일 기준이 어떻게 되나요? </div>
+              <div class="answer">
+                수령일 = 대여시작일, 반납일 = 대여종료일로 기준을 잡고 있습니다.
+                <br> A박B일 여행이라면 B일이 총 대여일입니다.
+                <br> 예시 : 3박5일 -> 5일 
+              </div>
+            </div>
+            <div class="faq">
+              <div class="question">초보자도 쉽게 사용할 수 있나요? </div>
+              <div class="answer">
+                네 누구나 쉽게 사용할 수 있습니다! 
+                <br>Tripcam 카카오톡 채널에서 누구나 쉽게 사용할 수 있도록 작동방법을 알려드리고 있습니다. 
+                <br>또한 사용법에 대한 질문은 실시간으로 카카오톡 채널에서 물어보실 수 있어요.
+              </div>
+            </div>
+            <div class="faq">
+              <div class="question">SD카드가 무엇인가요? </div>
+              <div class="answer">
+                카메라에 사진저장소라고 생각하시면 됩니다.
+                <br>고프로 10이나 DJI포켓2에는 SD카드가 필수로 들어갑니다. <br>SD카드로 통해서 폰으로 사진 및 동영상을 쉽게 전송할수 있어요.
+                <!-- <br>(SD카드 용량: 10 1가지 종류 있습니다 --) -->
+              </div>
+            </div>
+            <div class="faq">
+              <div class="question">SD 카드를 따로 구매해야 되나요?  </div>
+              <div class="answer">
+                대여로 1개 제공 해드리고 있습니다. 하지만 SD카드를 개인적으로 구매하고 싶다면 할 수 있습니다.
+              </div>
+            </div>
+          </div>
+          <div id =kakaoCta>더 자세한 내용과 질문을 원한다면  Tripcam 카카오톡 채널을 이용해주세요.</div>
+          <div
+  id="kakao-talk-channel-add-button"
+  data-channel-public-id="_vmzuG"
+  data-size="large"
+  data-support-multiple-densities="true"
+></div>
+        </div> 
+
+        <!-- <option value="" disabled selected>Select a product</option> -->
+
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</script>
+</html>
