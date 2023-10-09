@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tripcam(트립캠) - 예약신청</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -35,22 +34,22 @@
 
       <div class="information" id="example">
         <label for="totalRentalDay">총 대여일</label>
-        <input type="text" id="totalRentalDay" name="totalRentalDay"  min="1" max="100" step="1" required>
+        <input type="text" id="totalRentalDay" name="totalRentalDay"  min="1" max="100" step="1"  required>
       </div>
       <div class="information">
        <label for="rental-place">대여장소</label>
        <select id="rental-place" name="rental-place" required>
         <option value="" disabled selected>대여하실 장소를 선택해주세요</option> 
-        <option value="incheon-terminal-1">인천공항 제 1터미널</option>
-        <option value="incheon-terminal-2">인천공항 제 2터미널</option>
+        <option value="인천공항 제1여객터미널">인천공항 제1여객터미널</option>
+        <option value="인천공항 제2여객터미널">인천공항 제2여객터미널</option>
        </select>
       </div>
       <div class="information">
         <label for="return-place">반납장소</label>
         <select id="return-place" name="return-place" required>
          <option value="" disabled selected>반납하실 장소를 선택해주세요</option> 
-         <option value="incheon-terminal-1">인천공항 제 1터미널</option>
-         <option value="incheon-terminal-2">인천공항 제 2터미널</option>
+         <option value="인천공항 제1여객터미널">인천공항 제1여객터미널</option>
+         <option value="인천공항 제2여객터미널">인천공항 제2여객터미널</option>
         </select>
       </div>
       <div class="information-rentalday">

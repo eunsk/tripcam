@@ -81,9 +81,9 @@ app.post('/submit', async (req, res) => {
   ▷반납 장소 : ${req.body['return-place']}
   ▷대여 날짜/시간 : ${req.body['rental-day']}, ${req.body['rental-time']}
   ▷반납 날짜/시간 : ${req.body['return-day']}, ${req.body['return-time']}
-  ▷총 대여금액 : ${totalRentalPrice}
+  ▷총 대여금액 : ${totalRentalPrice} 원
 
- 예약하신 정보 확인해주시고 농협 신은석 3120182618441 으로 입금하시면 최종예약이 완료됩니다.`;
+ 예약하신 정보 확인해주시고, 총 대여금액인 ${totalRentalPrice} 원을 농협 신은석 3120182618441 으로 입금하시면 최종예약이 완료됩니다.`;
 
     await client.messages.create({
       body: message,

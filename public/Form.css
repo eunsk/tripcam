@@ -14,7 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     padding : 0 20px;
-    background:#fff ;
+    background:white ;
 }
 
 .container{
@@ -67,12 +67,6 @@ body{
     padding:6px 2em 6px .4em;
 }
 
-
-
-/* .ui-spinner-input{
-    width:100%;
-    
-} */
 
 #form .information #name{
     position :relative;
@@ -222,6 +216,13 @@ body{
     border-radius: 6px;
     font-weight: 400;
     background-color: black;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#form button:hover {
+    background-color: #333333; /* 마우스 호버 시 배경색 변화 */
+    color: #fff; /* 마우스 호버 시 텍스트 색상 변화 */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); /* 그림자 효과 추가 */
 }
 
 #totalPrice{
@@ -234,65 +235,33 @@ body{
     margin-left:3px;
 }
 
+
+
 /* ------------------------------미디어 쿼리-------------------------0 */
 
-@media (max-width: 376px) {
-    body {
-      align-items: start; /* body 요소를 수직 가운데 정렬합니다. */
-      display: flex; /* body를 flex 컨테이너로 만듭니다. */
-      height: 200vh; /* 화면 높이의 100%를 사용하여 수직 가운데 정렬합니다. */
-      position:relative;
-    }
 
-    input, select{
-        touch-action: manipulation; /* 스크롤 방지 */
-       -webkit-overflow-scrolling: touch; /* iOS 스크롤 방지 */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 10px; /* 화면 좌우 여백을 줄임 */
     }
   
     .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 40px 25px 20px 25px;
-        max-width: 90%;
-        
+      max-width: 100%; /* 컨테이너의 최대 너비를 100%로 설정 */
+      padding: 15px; /* 내부 여백을 조정 */
+    }
+  
+    .container header {
+      margin-bottom: 60px; /* 작은 화면에서는 마진을 줄여 공간을 활용 */
+    }
+  
+    input[type="text"],
+    input[type="tel"],
+    select {
+      font-size: 14px; /* 작은 화면에서 폰트 크기를 줄임 */
     }
   
     #form button {
-      height: 50px; /* 제출 버튼의 높이를 조절합니다. */
-      margin-bottom: 20px; /* 버튼 아래 여백을 조절합니다. */
+      margin-top: 20px; /* 버튼의 상단 여백을 조정 */
     }
   }
-
-@media (min-width: 376px) and (max-width: 768px) {
-    body {
-      align-items: start; 
-      display: flex; 
-      height: 250vh; 
-      position:relative;
-    }
-
-    input, select{
-        touch-action: manipulation; /* 스크롤 방지 */
-       -webkit-overflow-scrolling: touch; /* iOS 스크롤 방지 */
-    }
-    
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 40px 25px 120px 25px;
-        max-width: 90%;
-        
-        
-    }
-  
-    #form button {
-      height: 50px; /* 제출 버튼의 높이를 조절합니다. */
-      margin-bottom: 20px; /* 버튼 아래 여백을 조절합니다. */
-    }
-  }
-  
   
