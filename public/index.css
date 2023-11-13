@@ -16,7 +16,7 @@
 
   #main{
     position: relative;
-    background-image:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    background-image:  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
      url('./image/공항사진.jpg');
     background-size: cover;
     background-position: center;
@@ -81,9 +81,9 @@ margin-bottom: 50px;
 }
 
 #intro button{
-  background-color:white;
+  background-color:#3f7ef9;
   font-weight:500;
-  color:black;
+  color:white;
   outline:none;
   padding:12px 25px;
   letter-spacing: -20px;
@@ -91,13 +91,13 @@ margin-bottom: 50px;
   border:none;
   letter-spacing: 3px;
   cursor: pointer;
-  opacity: 50%;
-  border-radius: 99px;
+  /* opacity: 50%; */
+  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 #intro button:hover {
-  background-color: black; /* 호버 시 배경색 변경 */
+  background-color: #3864b9; /* 호버 시 배경색 변경 */
   color: white; /* 호버 시 글자색 변경 */
 }
 /* -------------------------------------- 2번째 섹션------------------------- */
@@ -134,7 +134,7 @@ margin-bottom: 50px;
 
 .product {
   background-color: #fff;
-  padding: 20px;
+  padding: 50px;
   margin: 20px;
   width:30%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -150,21 +150,24 @@ margin-bottom: 50px;
   margin-top:10px;
 }
 
-.product .price{
-  padding-top:20px;
-  padding-bottom:20px;
-}
-.product .price .product-explain{
-  padding-top :20px;
+
+
+.product .product-explain{
+  padding-top:10px;
+  padding-bottom:35px;
 }
 
-.product .productname-price .product-explain{
-  font-size: 18px;
-  font-weight: 600;
-}
-.product .productname-price .inclusionProduct{
+.product .price{
   font-size: 16px;
-  margin-top: 5px;
+  font-weight: 600;
+  margin-bottom:20px;
+}
+
+.product a{
+  display: inline-block; /* 인라인 요소를 블록 요소로 변경하여 너비와 높이를 설정할 수 있게 함 */
+  width: 150px; /* 너비를 100px로 설정 */
+   /* 높이를 100px로 설정 */
+   margin:5px;
 }
 
 
@@ -199,16 +202,32 @@ margin-bottom: 50px;
 .question {
   font-weight: bold;
   cursor: pointer;
+  /* margin-bottom: 3px; */
 }
 
-.answer {
+/* .answer {
   display: none;
   margin-top: 20px;
 }
 
 .answer.active {
   display: block;
+} */
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+  color:white;
 }
+
+.answer.active {
+  max-height: 1000px; /* 충분히 큰 값으로 설정하면 내용에 맞게 자연스럽게 펼쳐집니다. */
+  margin-top: 30px; /* 내용이 펼쳐질 때 위쪽 여백 추가 */
+}
+
+
 #kakaoCta{
   margin-top: 20px;
   margin-bottom:20px;
@@ -270,26 +289,20 @@ margin-bottom: 50px;
         margin-bottom: 20px; /* 하단 여백을 조정 */
         font-weight:100;
         margin-bottom:40px;
-        
-        
+        letter-spacing: 0.6px;
         }
 
-      #intro button{
+      
+  
 
-          background-color:white;
-          font-weight:500;
-          color:black;
-          outline:none;
-          padding:12px 25px;
-          letter-spacing: -20px;
-          font-size: 1em;
-          border:none;
-          letter-spacing: 3px;
-          cursor: pointer;
-          opacity: 50%;
-          border-radius: 99px;
-          transition: background-color 0.3s, color 0.3s;
+        #intro button{
+        
+            padding: 10px 20px; /* 버튼의 패딩을 줄임 */
+            font-size: 1em; /* 버튼의 글자 크기를 줄임 */
+        
         }
+        
+        
 
         /* -------------------섹션2--------------------------- */
 
@@ -314,37 +327,57 @@ margin-bottom: 50px;
           flex-direction: row; /* 가로로 나열 */
           align-items: center;
           width:100%;
-          
+          padding:25px;
         }
+
+        
       
         /* 이미지를 왼쪽에 배치합니다. */
         .product img {
           flex: 1; /* 자동으로 남은 공간을 차지하도록 설정 */
-          width: 60%; /* 이미지 크기 자동으로 조절 */
+          width: 50%; /* 이미지 크기 자동으로 조절 */
+          
         }
       
         /* .productname-price를 오른쪽에 배치합니다. */
         .product .productname-price {
           flex: 1; /* 자동으로 남은 공간을 차지하도록 설정 */
           text-align: left; /* 텍스트를 오른쪽 정렬 */
-          padding-left: 20px;
+          padding-left: 10px;
           
         }
+        .productname-price h3{
+          font-size:20px;
+        }
         
-        .product .price{
-          padding-top:1px;
+        .product .product-explain{
+          padding-top:12px;
           padding-bottom:20px;
+          font-size: 15px;
+          
         }
 
-        .product .productname-price .product-explain{
-          font-size: 14px;
+        .product .price{
+          font-size: 15px;
           font-weight: 500;
+          margin-bottom: 15px;
+          
         }
 
-        .product .productname-price .inclusionProduct{
-          margin-top: 10px;
-          font-size: 12px;
+        /* .productname-price .info{
+          margin-top:10px;
+        } */
+
+        .product a{
+          margin-top:25px;
+          width: 140px;
+          
+
         }
+        .infolink{
+          font-size:13px;
+        }
+       
         
 
         /* ----------------------섹션3------------------------- */
@@ -393,6 +426,26 @@ margin-bottom: 50px;
   }
 
   @media screen and (max-width: 480px) {
+
+    #intro button {
+      padding: 8px 16px; /* 버튼의 패딩을 더 줄임 */
+      font-size: 0.9em; /* 버튼의 글자 크기를 더 줄임 */
+    }
+
+    
+
+    .productname-price h3{
+      font-size:18px;
+    }
+    
+    .product .product-explain{
+      padding-top:12px;
+      padding-bottom:20px;
+      font-size: 14px;
+      
+    }
+
+
     .faq-container {
         max-width: 95%;
         margin: 30px auto;
